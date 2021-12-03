@@ -1,77 +1,52 @@
 const gridMock =
 {
     "grid" : {
-        "row_number" : 4,
-        "col_number" : 4,
-        "description" : [
-            [0, 1, 0, 0],
-            [0, 2, -1, 3],
-            [0, 0, 1, -4],
-            [1, -1, 3, 4]
-        ], 
+        "nb_columns" : 3,
         "islands" : [
             {
-                "uuid" : 0,
+                "position" : 0,
                 "population" : 1,
-                "coordinates" : {
-                    "i" : 0,
-                    "j" : 1
-                },
-                "connections" : [1]
+                "connections" : [{"to": 2, "type": "simple"}]
             }, 
             {
-                "uuid" : 1,
+                "position" : 1,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 2,
+                "population" : 3,
+                "connections" : [{"to": 0, "type": "simple"}, {"to": 8, "type": "simple"}]
+            }, 
+            {
+                "position" : 3,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 4,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 5,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 6,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 7,
+                "population" : 0,
+                "connections" : []
+            }, 
+            {
+                "position" : 8,
                 "population" : 2,
-                "coordinates" : {
-                    "i" : 1,
-                    "j" : 1
-                },
-                "connections" : [0,2]
-            },
-            {
-                "uuid" : 2,
-                "population" : 3,
-                "coordinates" : {
-                    "i" : 1,
-                    "j" : 3
-                },
-                "connections" : [1,6]
-            },
-            {
-                "uuid" : 3,
-                "population" : 1,
-                "coordinates" : {
-                    "i" : 2,
-                    "j" : 2
-                },
-                "connections" : [5]
-            },
-            {
-                "uuid" : 4,
-                "population" : 1,
-                "coordinates" : {
-                    "i" : 3,
-                    "j" : 0
-                },
-                "connections" : [5]
-            }, 
-            {
-                "uuid" : 5,
-                "population" : 3,
-                "coordinates" : {
-                    "i" : 3,
-                    "j" : 2
-                },
-                "connections" : [4,3,6]
-            },
-            {
-                "uuid" : 6,
-                "population" : 4,
-                "coordinates" : {
-                    "i" : 3,
-                    "j" : 3
-                },
-                "connections" : [5,2]
+                "connections" : [{"to": 2, "type": "double"}]
             }
         ]            
     }
