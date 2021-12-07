@@ -1,9 +1,7 @@
-export function addGridCenters(grid, containerWidth) {
+export async function addGridCenters(grid, containerWidth) {
 
     let x = []
     let y = []
-
-    console.log(grid.islands[6])
 
     for(let i = 1; i <= grid.nb_columns; i++) {
 
@@ -27,7 +25,7 @@ export function addGridCenters(grid, containerWidth) {
 
 }
 
-export function addGridIslandsSizes(grid, containerWidth) {
+export async function addGridIslandsSizes(grid, containerWidth) {
 
     // Compute the island diameter from the dimensions and the number of columns
     const islandSize = containerWidth / (grid.nb_columns * 1.8)
