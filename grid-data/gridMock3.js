@@ -16,7 +16,7 @@ const gridMock =
             {
                 "position" : 2,
                 "population" : 3,
-                "connections" : [{"to": 0, "type": "simple"}, {"to": 8, "type": "simple"}]
+                "connections" : [{"to": 0, "type": "simple"}, {"to": 8, "type": "double"}]
             }, 
             {
                 "position" : 3,
@@ -52,6 +52,6 @@ const gridMock =
     }
 }
 
-export function getGridMock() {
+export function getGridMock3() {
     return(gridMock);
 }

@@ -6,12 +6,12 @@ export async function addGridCenters(grid, containerWidth) {
     for(let i = 1; i <= grid.nb_columns; i++) {
 
         // Compute x position for each center
-        x = containerWidth / (grid.nb_columns + 1) * (i)
+        y = containerWidth / (grid.nb_columns + 1) * (i)
 
         for(let j = 1; j <= grid.nb_columns; j++) {
 
             // Compute y position for each center
-            y = containerWidth / (grid.nb_columns + 1) * (j)
+            x = containerWidth / (grid.nb_columns + 1) * (j)
 
             // Add x and y label for the island centers
             grid.islands[(i - 1) * grid.nb_columns + (j - 1)].x = x;
@@ -34,4 +34,4 @@ export async function addGridIslandsSizes(grid, containerWidth) {
 
     return grid
 
-}
+} 

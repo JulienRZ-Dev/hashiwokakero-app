@@ -2,7 +2,8 @@ import React, { useRef, useState, useEffect } from 'react'
 import { View, Text, Dimensions } from 'react-native'
 import Grid from './grid-components/Grid'
 
-import { getGridMock } from './grid-data/gridMock'
+import { getGridMock3 } from './grid-data/gridMock3'
+import { getGridMock4 } from './grid-data/gridMock4'
 import { addGridCenters, addGridIslandsSizes } from './grid-utils/utils'
 
 export default function App() {
@@ -11,13 +12,14 @@ export default function App() {
   const dimensions = useRef(Dimensions.get("window"))
   const width = dimensions.current.width
 
-  const[loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   const [grid, setGrid] = useState(null)
+
 
   useEffect(async () => {
 
     // Get the grid from the mock
-    let tmp = getGridMock().grid
+    let tmp = await getGridMock4().grid
 
     // Get the centers coordinates
     tmp = await addGridIslandsSizes(tmp, width)
@@ -27,11 +29,10 @@ export default function App() {
 
   }, []);
 
-
   if (!loading) {
 
     return (
-      
+
       <Grid grid={grid} />
 
     )
@@ -49,5 +50,4 @@ export default function App() {
     )
 
   }
-
 }

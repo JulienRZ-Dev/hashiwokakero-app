@@ -23,7 +23,9 @@ export function Island({ size, label, x, y }) {
                     alignItems: "center",
                     position: "absolute",
                     left: x,
-                    top: y
+                    top: y,
+                    backgroundColor: "white",
+                    zIndex: 1
                 }}
             >
 
