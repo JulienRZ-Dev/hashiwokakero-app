@@ -123,7 +123,7 @@ export default function Picture() {
 
         <Image
           style={{
-            height: height,
+            height: width,
             width: width,
             alignSelf: 'center'
           }}
@@ -156,14 +156,15 @@ export default function Picture() {
     <View style={styles.container}>
       <Camera 
         style={{
-          height: height,
+          height: width,
           width: width,
           alignSelf: 'center'
         }}
         ref={r => { camera = r }}
-        ratio="16:9"
+        ratio="1:1"
       >
-        <View style={styles.buttonContainer}>
+      </Camera>
+      <View style={styles.buttonContainer}>
 
           {/* Take picture button */}
           <TouchableOpacity style={styles.button} onPress={onTakePicture}>
@@ -171,7 +172,6 @@ export default function Picture() {
           </TouchableOpacity>
 
         </View>
-      </Camera>
     </View>
 
   );
